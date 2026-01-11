@@ -14,23 +14,30 @@
 
 <css-doodle>
     :doodle {
-        @grid: 1 / 100vmax;
-        background: linear-gradient(160deg, #A3A1A6 45%, #DBCAAE 81%, #FDD597 89%);
+    @grid: 1 / 100vmax;
+    background: linear-gradient(160deg, #A3A1A6 45%, #DBCAAE 81%, #FDD597 89%);
     }
 
-    /* Position the cloud 'source' in the center */
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 1px;
-    height: 1px;
+    top: 50%; left: 50%;
+    width: 1px; height: 1px;
 
-    box-shadow: @m15(
+    box-shadow: @m20(
     @r(-50vw, 50vw) @r(-50vh, 50vh)
     @r(20vmin, 50vmin) @r(10vmin, 30vmin)
-    #f3ac94
+    @p(#ff8c42, #e65c00, #f3ac94)
     );
 
-    opacity: .5;
-    filter: blur(20px);
+    opacity: .4;
+    filter: blur(30px);
+    animation: scroll-across 100s linear infinite;
+
+    @keyframes scroll-across {
+    from {
+    transform: translateX(-70vw) translateY(@r(-20vh, 20vh)) rotate(0deg);
+    }
+    to {
+    transform: translateX(70vw) translateY(@r(-20vh, 20vh)) rotate(10deg);
+    }
+    }
 </css-doodle>
