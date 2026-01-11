@@ -1,0 +1,36 @@
+<script src="https://unpkg.com/css-doodle@0.39.1/css-doodle.min.js"></script>
+
+<style>
+    body {
+        margin: 0;
+        background: #A3A1A6;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+</style>
+
+<css-doodle>
+    :doodle {
+        @grid: 1 / 100vmax;
+        background: linear-gradient(160deg, #A3A1A6 45%, #DBCAAE 81%, #FDD597 89%);
+    }
+
+    /* Position the cloud 'source' in the center */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1px;
+    height: 1px;
+
+    box-shadow: @m15(
+    @r(-50vw, 50vw) @r(-50vh, 50vh)
+    @r(20vmin, 50vmin) @r(10vmin, 30vmin)
+    #f3ac94
+    );
+
+    opacity: .5;
+    filter: blur(20px);
+</css-doodle>

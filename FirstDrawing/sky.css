@@ -1,0 +1,33 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+css-doodle {
+    display: block;
+    position: fixed;
+    inset: 0;
+}
+.gradient{
+    background: linear-gradient(
+            160deg, #A3A1A6 45%, #DBCAAE 81%, #FDD597 89%
+    );
+    min-height: 100vh;
+    margin: 0;
+}
+css-doodle {
+    display: block;
+    position: fixed;
+    inset: 0;
+
+    --rule: (
+    @size: 1px;
+
+    box-shadow: @m10(
+    @r(100vw) @r(100vh)
+@r(30vmin, 50vmin)
+@r(40vmin)
+@pd(#f3ac94, #f3ac94)
+);
+);
+}
